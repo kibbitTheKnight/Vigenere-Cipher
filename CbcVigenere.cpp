@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
 	
@@ -8,18 +10,18 @@ int main()
 }
 
 // Converts text to lowercase and removes spaces and any characters that are not alphabetic
-public static String convertText()
+static char * convertText()
 {
 	
 }
 
 // Prepares the text to be sent into cipher()
-public static String cipherShell(String toCipher, String initVector, String keyword)
+static char * cipherShell(char * toCipher, char * initVector, char * keyword)
 {
 	//declare and initialize variables
-    String finishedCipher = "";
-    String block = "";
-    String cipheredBlock = "";
+    char * finishedCipher;
+    char * block;
+    char * cipheredBlock;
     int blockLength = initVector.length();
         
     //convert initVector into char array
@@ -75,13 +77,13 @@ public static String cipherShell(String toCipher, String initVector, String keyw
 }
 
 // Applies the cipher to the text, block by block
-public static String cipher(String block, String keyword, char[] prevBlock)
+static char * cipher(char * block, char * keyword, char * prevBlock)
 {
 	//declare and initialize variables
     char letter = 'a';
     int xorNum = 0;
     int vigNum = 0;
-    String finishedBlock = "";
+    char * finishedBlock = "";
     for(int i = 0; i < block.length(); i++)
     {
         //take single char from block
@@ -106,7 +108,7 @@ public static String cipher(String block, String keyword, char[] prevBlock)
 }
 
 //prints output
-public static void printOutput(String toPrint)
+static void printOutput(char * toPrint)
 {
 	
 }
